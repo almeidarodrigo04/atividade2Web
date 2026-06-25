@@ -1,0 +1,81 @@
+import { Sequelize, DataTypes } from "sequelize";
+
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: ":memory:",
+  logging: false,
+});
+
+const Potion = sequelize.define("Potion", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  price: {
+    type: DataTypes.FLOAT,
+    allowNull: false,
+  },
+});
+
+const seedPotions = [
+  {
+    name: "Poção Blue Sky",
+    description:
+      "Essa poção provê um surto de inspiração por 24 horas. Foi utilizada por John Lennon quando escreveu Lucy in the Sky with Diamonds.",
+    image: "https://images.pexels.com/photos/7978124/pexels-photo-7978124.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 300,
+  },
+  {
+    name: "Poção do Perfume Misterioso",
+    description:
+      "Essa poção faz com que você fique cheirando lilás e groselha por 24 dias. Essência muito admirada pelos bruxos.",
+    image: "https://images.pexels.com/photos/7979099/pexels-photo-7979099.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 200,
+  },
+  {
+    name: "Poção de Pinus",
+    description:
+      "Essa poção faz com que você fique 10 cm mais alto! Observação: efeitos colaterais desconhecidos.",
+    image: "https://images.pexels.com/photos/7978989/pexels-photo-7978989.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 3000,
+  },
+  {
+    name: "Poção da Beleza Eterna",
+    description: "Veneno que mata rápido.",
+    image: "https://images.pexels.com/photos/17459947/pexels-photo-17459947.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 100,
+  },
+  {
+    name: "Poção do Arco Íris",
+    description: "Traz felicidade momentânea. Pode durar de 10 minutos a 2 dias.",
+    image: "https://images.pexels.com/photos/7978124/pexels-photo-7978124.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 120,
+  },
+  {
+    name: "Caldeirão das Verdades Secretas",
+    description: "As pessoas lhe dirão apenas verdades por 1 hora. É necessário beber os 5L.",
+    image: "https://images.pexels.com/photos/7979099/pexels-photo-7979099.jpeg?auto=compress&cs=tinysrgb&w=800",
+    price: 150,
+  },
+];
+
+export const initDatabase = async () => {
+  await sequelize.sync({ force: true });
+  await Potion.bulkCreate(seedPotions);
+  console.log("Database initialized and seeded.");
+};
+
+export { Potion };
