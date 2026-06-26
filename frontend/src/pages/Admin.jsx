@@ -94,7 +94,7 @@ const Admin = () => {
   return (
     <div className="admin-page">
       <header className="admin-header">
-        <h1 className="admin-header__title">⚗️ Painel de Administração</h1>
+        <h1 className="admin-header__title">Painel de Administração</h1>
         <div className="admin-header__actions">
           <button className="btn btn--ghost" onClick={() => navigate("/")}>
             Ver loja

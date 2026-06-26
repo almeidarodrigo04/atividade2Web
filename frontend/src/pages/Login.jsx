@@ -46,7 +46,6 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="login-box">
-        <div className="login-box__symbol">⚗️</div>
         <h1 className="login-box__title">Área Restrita</h1>
         <p className="login-box__subtitle">
           Apenas Annabelle Merigold pode entrar aqui.
