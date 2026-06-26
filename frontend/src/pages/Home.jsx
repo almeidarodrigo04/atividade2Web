@@ -59,7 +59,7 @@ const Home = () => {
               </p>
               <p className="section__text">
                 Apenas atrás da caça às bruxas, a pandemia foi a época de maior impacto no nosso honrável negócio,
-                juntando a queda de vendas a aparente inabiidade dos aplicativos de delivery de respeitar nossa
+                juntando a queda de vendas a aparente inabilidade dos aplicativos de delivery em respeitar nossa
                 prática ancestral, acusando-nos de "não seguir as recomendações da ANVISA", criamos este belo mostruário
                 com o nossas poções para que possam comprar.
               </p>
