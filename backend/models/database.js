@@ -70,6 +70,24 @@ const seedPotions = [
     image: "https://i.ibb.co/s9Lyvj8/rsz-verdades.png",
     price: 150,
   },
+  {
+    name: "Biscoito do Abismo",
+    description: "Serve uma deliciosa refeição para o seu Pet.",
+    image: "https://static.wikia.nocookie.net/leagueoflegends/images/d/d0/Poritos_item.png/revision/latest?cb=20240208233817&path-prefix=pt-br",
+    price: 35,
+  },
+  {
+    name: "Essência do Oráculo",
+    description: "As visões podem não lhe agradar, não nos repsonsabilizamos",
+    image: "https://static.wikia.nocookie.net/leagueoflegends/images/4/47/Ess%C3%AAncia_do_Or%C3%A1culo_item.png/revision/latest?cb=20131215223702&path-prefix=pt-br",
+    price: 250,
+  },
+  {
+    name: "Elixir da Ira",
+    description: "Não esteja por perto quando alguém bebê-la",
+    image: "https://static.wikia.nocookie.net/leagueoflegends/images/e/e1/Elixir_da_Ira_item.png/revision/latest?cb=20240208204635&path-prefix=pt-br",
+    price: 400,
+  },
 ];
 
 export const initDatabase = async () => {
