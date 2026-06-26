@@ -60,7 +60,7 @@ npm run dev            # inicia com node --watch na porta 3001
 cd frontend
 npm install
 cp .env.example .env   # ajuste VITE_API_URL se necessário
-npm run dev            # inicia Vite na porta 5173
+npm run dev            # inicia Vite na porta 5174
 ```
 
 Acesse `http://localhost:5174`.
