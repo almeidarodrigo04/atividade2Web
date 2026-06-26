@@ -266,7 +266,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
   font-size: 0.8rem;
   color: var(--text-muted);
   text-decoration: underline;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.2s;
 }
 .footer__admin-link:hover { opacity: 1; }

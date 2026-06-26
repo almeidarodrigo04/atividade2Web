@@ -80,14 +80,3 @@ Acesse `http://localhost:5174`.
 | Variável        | Descrição              | Padrão                       |
 |-----------------|------------------------|------------------------------|
 | `VITE_API_URL`  | URL base da API        | `http://localhost:3001/api`  |
-
-## API
-
-| Método | Rota                  | Autenticação | Descrição               |
-|--------|-----------------------|--------------|-------------------------|
-| GET    | `/api/potions`        | ✗            | Lista todas as poções   |
-| POST   | `/api/potions`        | ✓ JWT        | Cadastra nova poção     |
-| DELETE | `/api/potions/:id`    | ✓ JWT        | Remove poção por ID     |
-| POST   | `/api/auth/login`     | ✗            | Autentica e retorna JWT |
-
-O token deve ser enviado no header: `Authorization: Bearer <token>`
