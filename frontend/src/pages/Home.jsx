@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PotionCard from "../components/PotionCard";
+import painel from "../assets/pantano_obscuro.png";
+import fachada from "../assets/loja-fachada.jpg";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:3001/api";
 
@@ -27,7 +29,7 @@ const Home = () => {
         <div className="hero__overlay" />
         <img
           className="hero__bg"
-          src="https://images.pexels.com/photos/17459947/pexels-photo-17459947.jpeg?auto=compress&cs=tinysrgb&w=1280"
+          src={painel}
           alt="Floresta mística"
         />
         <div className="hero__content">
@@ -41,57 +43,28 @@ const Home = () => {
       {/* Shop Description */}
       <section className="section section--about">
         <div className="container">
-          <h2 className="section__heading">A Nossa Loja</h2>
-          <p className="section__text">
-            Fundada por Annabelle Merigold, a Poções & Soluções é o destino
-            definitivo para quem busca remédios mágicos, elixires raros e
-            preparos especiais. Cada poção é elaborada com ingredientes
-            selecionados e destilada sob a luz da lua, garantindo a mais alta
-            potência e qualidade.
-          </p>
-          <p className="section__text">
-            Nossos produtos chegaram a grandes bruxos e aventureiros de todas
-            as partes do reino. Seja para curar, fortalecer ou simplesmente
-            cheirar melhor — temos o que você precisa.
-          </p>
-        </div>
-      </section>
+          <h2 className="section__heading">Sobre a loja</h2>
 
-      {/* History */}
-      <section className="section section--history">
-        <div className="container">
-          <h2 className="section__heading">Nossa História</h2>
-          <div className="history__grid">
-            <div className="history__block">
-              <div className="history__year">1867</div>
-              <p className="history__text">
-                Annabelle Merigold abre as portas da primeira loja no Beco da
-                Última Saída com apenas três poções no estoque e uma caldeira
-                herdada de sua avó.
+          <div className="about-content">
+            <figure className="about-figure">
+              <img
+                src={fachada}
+                alt="Fachada da loja Poções e Soluções"
+                loading="lazy"
+              />
+            </figure>
+            <div className="about-text">
+              <p className="section__text">
+                Idealizada pela Família Merigold, mundialmente conhecida por suas habilidades em alquimia,
+                a loja Poções & Soluções se mantém sob a administração de Annabele Merigold com a mesma premissa
+                de seus antepassados: trazer soluções concretas para os problemas de seus Clientes através de
+                uma alquimia de primeira qualidade.
               </p>
-            </div>
-            <div className="history__block">
-              <div className="history__year">1923</div>
-              <p className="history__text">
-                A segunda geração da família Merigold expande o catálogo para
-                mais de cinquenta fórmulas, incluindo a famosa Poção de Pinus,
-                que virou lenda entre os bruxos mais altos do continente.
-              </p>
-            </div>
-            <div className="history__block">
-              <div className="history__year">1969</div>
-              <p className="history__text">
-                John Lennon adquire a Poção Blue Sky e credita o elixir como
-                fonte de inspiração para uma de suas composições mais icônicas.
-                A loja nunca mais foi a mesma.
-              </p>
-            </div>
-            <div className="history__block">
-              <div className="history__year">Hoje</div>
-              <p className="history__text">
-                Com um novo site e a mesma receita de excelência, Poções &
-                Soluções chega à era digital para atender a clientes de todo o
-                reino — e além.
+              <p className="section__text">
+                Apenas atrás da caça às bruxas, a pandemia foi a época de maior impacto no nosso honrável negócio,
+                juntando a queda de vendas a aparente inabiidade dos aplicativos de delivery de respeitar nossa
+                prática ancestral, acusando-nos de "não seguir as recomendações da ANVISA", criamos este belo mostruário
+                com o nossas poções para que possam comprar.
               </p>
             </div>
           </div>
@@ -101,7 +74,7 @@ const Home = () => {
       {/* Potions */}
       <section className="section section--potions">
         <div className="container">
-          <h2 className="section__heading">Nossas Poções</h2>
+          <h2 className="section__heading">Catálogo de Poções</h2>
           {loading && <p className="status-msg">Preparando o caldeirão...</p>}
           {error && <p className="status-msg status-msg--error">{error}</p>}
           {!loading && !error && potions.length === 0 && (
@@ -120,8 +93,8 @@ const Home = () => {
         <div className="container footer__inner">
           <div className="footer__info">
             <h3 className="footer__brand">Poções & Soluções</h3>
-            <p>Beco da Última Saída, nº 13 — Reino Encantado</p>
-            <p>📜 contato@pocoesesolucoes.mgc</p>
+            <p>Contato: contato@pocoesesolucoes.mgc</p>
+            <p>Endereço: Beco da Última Saída</p>
             <p>🕯 Aberto das 18h às 3h (exceto noites sem lua)</p>
           </div>
           <p className="footer__copy">

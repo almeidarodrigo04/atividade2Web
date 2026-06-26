@@ -1,7 +1,4 @@
-/* ─── Imports ─────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
-
-/* ─── Tokens ───────────────────────────────────────────────── */
+/*Estilo geral */
 :root {
   --bg:          #111a10;
   --bg-surface:  #1a2818;
@@ -18,14 +15,14 @@
   --danger:       #b85a5a;
   --danger-hover: #d47070;
 
-  --ff-display: 'Inknut Antiqua', serif;
-  --ff-body:    'Cardo', serif;
+  --ff-display: 'Gill Sans', serif;
+  --ff-body:    'Gill Sans', serif;
 
-  --radius: 12px;
+  --radius: 6px;
   --shadow: 0 0 28px rgba(80, 140, 60, 0.15);
 }
 
-/* ─── Reset ────────────────────────────────────────────────── */
+/*  */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -42,17 +39,17 @@ body {
 img { display: block; max-width: 100%; }
 a  { color: inherit; text-decoration: none; }
 
-/* ─── Typography ───────────────────────────────────────────── */
+/*Tipografia*/
 h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 
-/* ─── Utilities ────────────────────────────────────────────── */
+/*=Utilities*/
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* ─── Buttons ──────────────────────────────────────────────── */
+/*Buttons*/
 .btn {
   font-family: var(--ff-body);
   font-size: 0.95rem;
@@ -72,7 +69,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 .btn--ghost:hover { background: var(--bg-elevated); }
 .btn--full     { width: 100%; }
 
-/* ─── Forms ────────────────────────────────────────────────── */
+/*Forms*/
 .form-label {
   display: block;
   font-size: 0.85rem;
@@ -100,11 +97,11 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 .form-error   { color: var(--danger); font-size: 0.9rem; margin-top: 0.4rem; }
 .form-success { color: var(--accent); font-size: 0.9rem; margin-top: 0.4rem; }
 
-/* ─── Status ───────────────────────────────────────────────── */
+/*Status*/
 .status-msg        { color: var(--text-muted); font-style: italic; text-align: center; padding: 2rem; }
 .status-msg--error { color: var(--danger); }
 
-/* ─── Hero ─────────────────────────────────────────────────── */
+/*Hero*/
 .hero {
   position: relative;
   height: 65vh;
@@ -145,12 +142,9 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
   font-style: italic;
 }
 
-/* ─── Sections ─────────────────────────────────────────────── */
+/*Sections*/
 .section {
   padding: 5rem 0;
-}
-.section--history {
-  background: var(--bg-surface);
 }
 .section__heading {
   font-size: clamp(1.4rem, 3vw, 2rem);
@@ -165,39 +159,41 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
   text-align: center;
 }
 
-/* ─── History ──────────────────────────────────────────────── */
-.history__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-.history__block {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-}
-.history__year {
-  font-family: var(--ff-display);
-  font-size: 1.4rem;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-.history__text {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
 }
 
-/* ─── Potions Grid ─────────────────────────────────────────── */
+/*About*/
+.about-text {
+  flex: 1;
+}
+
+.about-figure {
+  flex: 1;
+  max-width: 420px;
+}
+
+.about-figure img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+/*Potions Grid*/
 .potions__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* ─── Potion Card ──────────────────────────────────────────── */
+/*Potion Card*/
 .potion-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -217,7 +213,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 .potion-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.35s;
 }
 .potion-card:hover .potion-card__image { transform: scale(1.04); }
@@ -245,7 +241,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
   color: var(--accent);
 }
 
-/* ─── Footer ───────────────────────────────────────────────── */
+/*Rodapé*/
 .footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
@@ -275,7 +271,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 }
 .footer__admin-link:hover { opacity: 1; }
 
-/* ─── Login Page ───────────────────────────────────────────── */
+/*Login*/
 .login-page {
   min-height: 100vh;
   display: flex;
@@ -308,7 +304,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 }
 .login-box__back:hover { color: var(--text-secondary); }
 
-/* ─── Admin Page ───────────────────────────────────────────── */
+/*Adm*/
 .admin-page { min-height: 100vh; background: var(--bg); }
 
 .admin-header {
@@ -373,7 +369,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
   border: 1px solid var(--border);
 }
 
-/* ─── Responsive ───────────────────────────────────────────── */
+/*Responsividade*/
 @media (max-width: 600px) {
   .admin-form__row { grid-template-columns: 1fr; }
   .hero { height: 50vh; }
