@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PotionCard from "../components/PotionCard";
 import painel from "../assets/painel.jpg";
-import fachada from "../assets/loja-fachada.jpg";
+import fachada from "../assets/loja_fachada.jpg";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:3001/api";
 
