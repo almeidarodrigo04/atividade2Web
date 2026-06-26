@@ -1,25 +1,26 @@
 /*Estilo geral */
 :root {
-  --bg:          #111a10;
-  --bg-surface:  #1a2818;
-  --bg-card:     #1f3320;
-  --bg-elevated: #253d27;
-  --border:      #2e4a2b;
+  --bg:          #14100c;
+  --bg-surface:  #1d1712;
+  --bg-card:     #241c15;
+  --bg-elevated: #2e2419;
+  --border:      #4a3a26;
 
-  --text-primary:   #c8dfc5;
-  --text-secondary: #8aab85;
-  --text-muted:     #5a7857;
+  --text-primary:   #e8d9b8;
+  --text-secondary: #b89f74;
+  --text-muted:     #7a6a4d;
 
-  --accent:       #7eb86a;
-  --accent-hover: #9fd48b;
-  --danger:       #b85a5a;
-  --danger-hover: #d47070;
+  --accent:       #c9a24d;
+  --accent-hover: #e0bc6a;
+  --danger:       #8a4a3a;
+  --danger-hover: #ab5c47;
+
+  --shadow: 0 0 28px rgba(180, 140, 60, 0.18);
 
   --ff-display: 'Gill Sans', serif;
   --ff-body:    'Gill Sans', serif;
 
   --radius: 6px;
-  --shadow: 0 0 28px rgba(80, 140, 60, 0.15);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -363,7 +364,7 @@ h1, h2, h3 { font-family: var(--ff-display); line-height: 1.2; }
 .admin-table__thumb {
   width: 56px;
   height: 42px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid var(--border);
 }

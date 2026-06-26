@@ -63,7 +63,7 @@ cp .env.example .env   # ajuste VITE_API_URL se necessário
 npm run dev            # inicia Vite na porta 5173
 ```
 
-Acesse `http://localhost:5173`.
+Acesse `http://localhost:5174`.
 
 ## Variáveis de Ambiente
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PotionCard from "../components/PotionCard";
-import painel from "../assets/pantano_obscuro.png";
+import painel from "../assets/painel.jpg";
 import fachada from "../assets/loja-fachada.jpg";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:3001/api";
@@ -34,9 +34,6 @@ const Home = () => {
         />
         <div className="hero__content">
           <h1 className="hero__title">Poções & Soluções</h1>
-          <p className="hero__subtitle">
-            Beco da Última Saída — Mestres do Elixir desde 1867
-          </p>
         </div>
       </header>
 
